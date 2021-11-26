@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+</head>
+<body>
+    <h1>Weather</h1>
+    <div id="weather"><%= weather %> </div>
+    <h1>Mumbai In</h1>
+    <div>
+        <span id="day">wed</span>
+        <span id="date">12</span>
+        <span id="month">Oct</span>
+    </div>
+
+    <div  id="temp"><%= temperature%>&deg; C </div>
+    <div>
+        Max Temperature: <span id="tempMin"><%= temperatureMin %>&deg; C </span> | 
+       Min Temperature: <span id="tempMax"><%= temperatureMax %>&deg; C </span>
+    </div>
+</body>
+<script>
+
+const day = document.getElementById("day");
+const date = document.getElementById("date")
+
+const weekDays =[
+"Sun","Mon","Tue","Wed","Thu","Fri","Sat"
+];
+const months = ["jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+function getDays(){
+    let date = new Date();
+    days = date.getDay();
+    return days;
+}
+
+getCurrDate = ()=>{
+let date = new Date();
+let currDate = date.getDate();
+
+return currDate
+}
+
+getCurrMonth = ()=>{
+    let date = new Date();
+    let currmonth = date.getMonth();
+    return currmonth;
+}
+day.innerHTML=weekDays[getDays()];
+date.innerHTML=getCurrDate();
+month.innerHTML=months[getCurrMonth()]
+
+</script>
+</html>
