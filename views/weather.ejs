@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
+    <link rel="stylesheet" href="../static/css/weather.css">
 </head>
 <body>
+<div class="container">
     <h1>Weather</h1>
     <div id="weather"><%= weather %> </div>
-    <h1>Mumbai In</h1>
+    <h1><span><%=city %> </span> <span><%= country %> </span></h1>
     <div>
         <span id="day">wed</span>
         <span id="date">12</span>
@@ -21,6 +23,9 @@
         Max Temperature: <span id="tempMin"><%= temperatureMin %>&deg; C </span> | 
        Min Temperature: <span id="tempMax"><%= temperatureMax %>&deg; C </span>
     </div>
+</div>
+
+ 
 </body>
 <script>
 
